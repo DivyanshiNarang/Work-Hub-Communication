@@ -1,0 +1,98 @@
+[
+  {
+    "model": "roster.rostermember",
+    "pk": 1,
+    "fields": {
+      "name": "Asha Rao",
+      "role": "member",
+      "seniority": "senior",
+      "jira_account_id": "REPLACE_WITH_REAL_JIRA_ACCOUNT_ID",
+      "github_handle": "asharao",
+      "slack_id": "U01ASHA",
+      "discord_id": "asha#1111",
+      "teams_id": "",
+      "domain_tags": ["frontend", "design"],
+      "preferred_platform": "slack"
+    }
+  },
+  {
+    "model": "roster.rostermember",
+    "pk": 2,
+    "fields": {
+      "name": "Dev Patel",
+      "role": "manager",
+      "seniority": "senior",
+      "jira_account_id": "REPLACE_WITH_REAL_JIRA_ACCOUNT_ID",
+      "github_handle": "devpatel",
+      "slack_id": "U01DEVP",
+      "discord_id": "devp#2222",
+      "teams_id": "",
+      "domain_tags": ["backend", "api", "database"],
+      "preferred_platform": "discord"
+    }
+  },
+  {
+    "model": "roster.rostermember",
+    "pk": 3,
+    "fields": {
+      "name": "Imran Shaikh",
+      "role": "member",
+      "seniority": "mid",
+      "jira_account_id": "REPLACE_WITH_REAL_JIRA_ACCOUNT_ID",
+      "github_handle": "imranshaikh",
+      "slack_id": "U01IMRAN",
+      "discord_id": "imran#3333",
+      "teams_id": "",
+      "domain_tags": ["devops", "backend"],
+      "preferred_platform": "slack"
+    }
+  },
+  {
+    "model": "roster.rostermember",
+    "pk": 101,
+    "fields": {
+      "name": "Maya Singh",
+      "role": "member",
+      "seniority": "junior",
+      "jira_account_id": "REPLACE_WITH_REAL_JIRA_ACCOUNT_ID",
+      "github_handle": "mayasingh",
+      "slack_id": "U01MAYA",
+      "discord_id": "maya#4444",
+      "teams_id": "",
+      "domain_tags": ["mobile", "frontend"],
+      "preferred_platform": "discord"
+    }
+  },
+  {
+    "model": "roster.rostermember",
+    "pk": 102,
+    "fields": {
+      "name": "Priya Nair",
+      "role": "member",
+      "seniority": "junior",
+      "jira_account_id": "REPLACE_WITH_REAL_JIRA_ACCOUNT_ID",
+      "github_handle": "priyanair",
+      "slack_id": "U01PRIYA",
+      "discord_id": "priya#5555",
+      "teams_id": "",
+      "domain_tags": ["qa", "backend"],
+      "preferred_platform": "slack"
+    }
+  },
+  {
+    "model": "roster.rostermember",
+    "pk": 103,
+    "fields": {
+      "name": "Dana Osei",
+      "role": "member",
+      "seniority": "junior",
+      "jira_account_id": "REPLACE_WITH_REAL_JIRA_ACCOUNT_ID",
+      "github_handle": "danaosei",
+      "slack_id": "U01DANA",
+      "discord_id": "dana#6666",
+      "teams_id": "",
+      "domain_tags": ["docs", "design"],
+      "preferred_platform": "discord"
+    }
+  }
+]

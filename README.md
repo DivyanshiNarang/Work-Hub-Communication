@@ -136,6 +136,12 @@ Jira and GitHub are both optional for local testing — ticket creation runs in 
 (prints what it would create) if Jira credentials aren't set, and GitHub status returns a clear
 error if the token isn't configured, rather than failing unpredictably.
 
+The seeded roster's `jira_account_id` is a placeholder (`REPLACE_WITH_REAL_JIRA_ACCOUNT_ID`) —
+real ticket creation needs each assignee's real Atlassian accountId (find your own via
+`GET /rest/api/3/myself` on your Jira site), set through the Django admin at `/admin/`, not by
+re-editing the fixture (re-running `loaddata` is meant to be safe to repeat, so it shouldn't need
+real secrets baked into it).
+
 Run the MCP server (separate process, what Switch attaches to the room's agent):
 
 ```bash

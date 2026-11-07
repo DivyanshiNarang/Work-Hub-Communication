@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-workhub}
+      POSTGRES_USER: ${POSTGRES_USER:-workhub}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-workhub}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-workhub}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build: .
+    command: >
+      sh -c "python manage.py collectstatic --noinput &&
+             python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8082"
+    volumes:
+      - .:/app
+    env_file: .env
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-workhub}:${POSTGRES_PASSWORD:-workhub}@db:5432/${POSTGRES_DB:-workhub}
+      DJANGO_DEBUG: "True"
+    ports:
+      - "8082:8082"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
